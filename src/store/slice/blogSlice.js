@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axiosInstance from "../../../api/axios";
+import axiosInstance from "../../api/axios";
+
 
 export const fetchBlogs = createAsyncThunk("blogs/fetchAll", async () => {
   const response = await axiosInstance.get("/blogs");
